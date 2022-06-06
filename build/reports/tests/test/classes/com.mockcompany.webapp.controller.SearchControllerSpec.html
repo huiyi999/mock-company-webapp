@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.mockcompany.webapp.controller.SearchControllerSpec</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.mockcompany.webapp.controller.SearchControllerSpec</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mockcompany.webapp.controller.html">com.mockcompany.webapp.controller</a> &gt; SearchControllerSpec</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">7</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">14.474s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="search is case insensitive"></a>
+<h3 class="failures">search is case insensitive</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1)
+|       |        |
+[]      false    ProductItem{id=16, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search is case insensitive(SearchControllerSpec.groovy:76)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will only match exactly on name or description when quotes are used"></a>
+<h3 class="failures">search will only match exactly on name or description when quotes are used</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1) // Matches on name
+|       |        |
+[]      false    ProductItem{id=26, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will only match exactly on name or description when quotes are used(SearchControllerSpec.groovy:146)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will return an item that matches the description of the product"></a>
+<h3 class="failures">search will return an item that matches the description of the product</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1)
+|       |        |
+[]      false    ProductItem{id=18, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will return an item that matches the description of the product(SearchControllerSpec.groovy:92)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will return an item that matches the name of the product"></a>
+<h3 class="failures">search will return an item that matches the name of the product</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1)
+|       |        |
+[]      false    ProductItem{id=11, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will return an item that matches the name of the product(SearchControllerSpec.groovy:42)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will return items if name or description match the search"></a>
+<h3 class="failures">search will return items if name or description match the search</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1) // Matches Will on name
+|       |        |
+[]      false    ProductItem{id=23, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will return items if name or description match the search(SearchControllerSpec.groovy:127)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will return multiple items when there are matches in the description"></a>
+<h3 class="failures">search will return multiple items when there are matches in the description</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1)
+|       |        |
+[]      false    ProductItem{id=20, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will return multiple items when there are matches in the description(SearchControllerSpec.groovy:109)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="search will return multiple items when there are matches in the name"></a>
+<h3 class="failures">search will return multiple items when there are matches in the name</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+results.contains(item1)
+|       |        |
+[]      false    ProductItem{id=13, name='Will Match', description='This is a good item', cost=100, image=''}
+
+	at com.mockcompany.webapp.controller.SearchControllerSpec.search will return multiple items when there are matches in the name(SearchControllerSpec.groovy:59)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">search is case insensitive</td>
+<td class="failures">0.026s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will only match exactly on name or description when quotes are used</td>
+<td class="failures">0.057s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will return an item that matches the description of the product</td>
+<td class="failures">0.137s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will return an item that matches the name of the product</td>
+<td class="failures">14.059s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will return items if name or description match the search</td>
+<td class="failures">0.095s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will return multiple items when there are matches in the description</td>
+<td class="failures">0.034s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">search will return multiple items when there are matches in the name</td>
+<td class="failures">0.066s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:08:50.804 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.865 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.865 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.866 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.875 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.877 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.880 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.881 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.882 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.883 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.885 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.886 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.887 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.887 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.887 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.888 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:50.894 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:08:50.903 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:08:50.916 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.mockcompany.webapp.controller.SearchControllerSpec] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:08:50.929 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mockcompany.webapp.controller.SearchControllerSpec], using SpringBootContextLoader
+17:08:50.933 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mockcompany.webapp.controller.SearchControllerSpec]: class path resource [com/mockcompany/webapp/controller/SearchControllerSpec-context.xml] does not exist
+17:08:50.934 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mockcompany.webapp.controller.SearchControllerSpec]: class path resource [com/mockcompany/webapp/controller/SearchControllerSpecContext.groovy] does not exist
+17:08:50.935 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.mockcompany.webapp.controller.SearchControllerSpec]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:08:50.936 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mockcompany.webapp.controller.SearchControllerSpec]: SearchControllerSpec does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:08:51.136 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.mockcompany.webapp.controller.SearchControllerSpec]
+17:08:51.425 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/chy/IdeaProjects/mock-company-webapp/build/classes/java/main/com/mockcompany/webapp/Application.class]
+17:08:51.439 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mockcompany.webapp.Application for test class com.mockcompany.webapp.controller.SearchControllerSpec
+17:08:52.237 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.mockcompany.webapp.controller.SearchControllerSpec]: using defaults.
+17:08:52.238 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.spockframework.spring.SpringMockTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:08:52.262 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@464a3493, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@a7a6899, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6e92574f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@941e298, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1e38b18f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47df2c71, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b0b33ea, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3dd84331, org.springframework.test.context.event.EventPublishingTestExecutionListener@66b729cc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@58353dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3ac3c140, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@457dcce2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1a5b74c8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6b71f909, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4f9cfce6, org.spockframework.spring.SpringMockTestExecutionListener@642d332b]
+17:08:52.760 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@799b4421 testClass = SearchControllerSpec, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@61ab3b14 testClass = SearchControllerSpec, locations = '{}', classes = '{class com.mockcompany.webapp.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.spockframework.spring.mock.SpockContextCustomizer@0, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@b29049e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@259984e5, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ac97f4e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@73c232db, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@27102193, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@56a67f78], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+17:08:52.797 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.1)
+
+2022-06-01 17:08:54.376  INFO 42405 --- [    Test worker] c.m.w.controller.SearchControllerSpec    : Starting SearchControllerSpec using Java 15.0.2 on Huiyis-MacBook-Pro.local with PID 42405 (/Users/chy/IdeaProjects/mock-company-webapp/build/classes/groovy/test started by chy in /Users/chy/IdeaProjects/mock-company-webapp)
+2022-06-01 17:08:54.382  INFO 42405 --- [    Test worker] c.m.w.controller.SearchControllerSpec    : No active profile set, falling back to default profiles: default
+2022-06-01 17:08:56.135  INFO 42405 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-01 17:08:56.256  INFO 42405 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interfaces.
+2022-06-01 17:08:57.586  INFO 42405 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-01 17:08:58.113  INFO 42405 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-01 17:08:58.869  INFO 42405 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-01 17:08:59.370  INFO 42405 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-06-01 17:09:00.148  INFO 42405 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-01 17:09:00.628  INFO 42405 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-01 17:09:02.635  INFO 42405 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-01 17:09:02.656  INFO 42405 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-01 17:09:04.332  WARN 42405 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-01 17:09:05.781  INFO 42405 --- [    Test worker] c.m.w.controller.SearchControllerSpec    : Started SearchControllerSpec in 12.976 seconds (JVM running for 17.168)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8.2</a> at Jun. 1, 2022, 5:09:09 p.m.</p>
+</div>
+</div>
+</body>
+</html>
